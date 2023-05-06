@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
     use 'folke/tokyonight.nvim'
     use 'rebelot/kanagawa.nvim'
     use 'morhetz/gruvbox'
+    use { "catppuccin/nvim", as = "catppuccin" }
 
     -- Treesitter for language syntax highlighting
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
@@ -54,7 +55,6 @@ return require('packer').startup(function(use)
     }
 
     -- File tree replacement for NetRW
-    -- use 'nvim-tree/nvim-web-devicons'
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
