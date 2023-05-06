@@ -5,7 +5,7 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)   
     -- Packer can manage itself   
-    use 'wbthomason/packer.nvim'
+    use('wbthomason/packer.nvim')
 
     -- Telescope is used for fuzzy finding files
     use {
@@ -15,10 +15,12 @@ return require('packer').startup(function(use)
     }
 
     -- Color schemes 
-    use 'folke/tokyonight.nvim'
-    use 'rebelot/kanagawa.nvim'
-    use 'morhetz/gruvbox'
-    use { "catppuccin/nvim", as = "catppuccin" }
+    use('folke/tokyonight.nvim')
+    use('rebelot/kanagawa.nvim')
+    use('morhetz/gruvbox')
+    use { 
+        "catppuccin/nvim", as = "catppuccin" 
+    }
 
     -- Treesitter for language syntax highlighting
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
@@ -28,6 +30,9 @@ return require('packer').startup(function(use)
 
     -- Awesome  undo support
     use('mbbill/undotree')
+
+    -- Auto brackets
+    use('rstacruz/vim-closer')
 
     -- Git support
     use('tpope/vim-fugitive')
