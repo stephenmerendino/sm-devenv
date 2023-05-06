@@ -1,11 +1,6 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", ":NvimTreeToggle<CR>")
 -- vim.keymap.set("n", "<leader>pvv", "<cmd>:Lex ~/AppData/Local/nvim/<CR>")
-
--- system clipboard copy/paste support
--- vim.keymap.set("n", "<leader>p", '"*p')
--- vim.keymap.set("v", "<leader>p", '"*p')
--- vim.keymap.set("v", "<leader>y", '"*y')
 
 -- Visual move code up and down
 vim.keymap.set("v", "J", ":m '>+1<cr>gv=gv")
@@ -52,3 +47,8 @@ vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+
+-- Bring up code action menu
+vim.keymap.set("n", "<leader>qf", function()
+    vim.lsp.buf.code_action()
+end)
