@@ -1,4 +1,9 @@
 local lsp = require('lsp-zero')
+local lsp_config = require('lspconfig')
+
+lsp_config.clangd.setup{
+    cmd = { "clangd", "--completion-style=detailed" }
+}
 
 lsp.preset('recommended')
 

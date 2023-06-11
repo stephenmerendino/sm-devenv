@@ -52,3 +52,6 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>qf", function()
     vim.lsp.buf.code_action()
 end)
+
+-- Switch between header/source files
+vim.keymap.set("n", "<leader>o", "<cmd>ClangdSwitchSourceHeader<CR>")
